@@ -1,0 +1,71 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro';
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalUrl}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yusuke Morishita",
+    "jobTitle": "Software Engineer, Mobile",
+    "url": "https://yusuke.ca",
+    "email": "hello@yusuke.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Vancouver",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/yusukeca/",
+      "https://github.com/yysskk"
+    ],
+    "knowsAbout": ["Swift", "SwiftUI", "Objective-C", "Kotlin", "Flutter", "TypeScript", "Next.js", "React"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Osaka Prefecture University"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "SmartNews"
+    }
+  })} />
+  <script is:inline>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (preferred === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <ThemeToggle />
+  <Navigation />
+  <slot />
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "yusukeca",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yysskk/yusukeca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yysskk/yusukeca/issues"
+  },
+  "homepage": "https://github.com/yysskk/yusukeca#readme",
+  "dependencies": {
+    "astro": "^6.1.5"
+  }
+}

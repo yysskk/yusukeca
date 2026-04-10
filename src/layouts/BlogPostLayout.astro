@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    date: Date;
+    tags?: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = frontmatter.date.toLocaleDateString('en-CA', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${frontmatter.title} - Yusuke Morishita`} description={frontmatter.description}>
+  <div class="blog-post">
+    <header class="blog-post-header">
+      <h1 class="blog-post-title">{frontmatter.title}</h1>
+      <time class="blog-post-date">{formattedDate}</time>
+      {frontmatter.tags && (
+        <div class="blog-post-tags">
+          {frontmatter.tags.map((tag) => (
+            <span class="skill-tag">{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+    <article class="prose">
+      <slot />
+    </article>
+    <a href="/blog/" class="blog-post-back">&larr; Back to blog</a>
+  </div>
+</BaseLayout>
