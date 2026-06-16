@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="StepFill Privacy Policy"
+  description="Privacy policy for StepFill — the app collects no data about you and makes no network connections."
+>
+  <main class="blog-container">
+    <h1 class="page-title">StepFill Privacy Policy</h1>
+    <section class="prose">
+      <p><strong>Last updated: June 5, 2026</strong></p>
+
+      <p>StepFill ("the app") is developed by Yusuke Morishita ("we", "us"). This
+      policy explains how the app handles your information. The short version:
+      <strong>StepFill does not collect any data about you.</strong></p>
+
+      <h2>No data collection</h2>
+      <p>StepFill has no user accounts, no analytics, no advertising, and no
+      third-party SDKs. It makes <strong>no network connections of any kind</strong>.
+      Nothing you enter is sent to us or to anyone else, because the app has no
+      server to send it to.</p>
+
+      <h2>Apple Health (HealthKit)</h2>
+      <p>The purpose of StepFill is to let you add step counts to Apple Health and
+      review or edit the entries you have saved.</p>
+      <ul>
+        <li>StepFill requests permission to <strong>write</strong> step data to Apple
+        Health (to add, edit, and delete entries) and to <strong>read</strong> your
+        step data. Reading is used only on your device, to show your step history and
+        to let you edit or delete the entries StepFill saved.</li>
+        <li>The step counts and dates you enter are saved to Apple Health on your
+        device by the operating system. This data is stored and protected by Apple
+        Health, not by us, and it stays on your device (subject to your own iCloud and
+        Health settings, which we do not control).</li>
+        <li>Your step data is read only on your device and is never transmitted, sold,
+        or shared. We (the developer) never receive it. It is never used for
+        advertising or marketing.</li>
+        <li>You can review or delete anything StepFill has written at any time in the
+        Health app: <strong>Browse &gt; Activity &gt; Steps &gt; Show All Data</strong>.</li>
+      </ul>
+
+      <h2>Data we store about you</h2>
+      <p>None. StepFill keeps no profile, identifiers, or usage records.</p>
+
+      <h2>Children's privacy</h2>
+      <p>StepFill does not collect personal information from anyone, including children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, we will update the date above and post the new version
+      at this URL.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:hello@yusuke.ca">hello@yusuke.ca</a>.</p>
+    </section>
+    <a href="/stepfill/terms" class="blog-post-back">Terms of Service &rarr;</a>
+  </main>
+</BaseLayout>
