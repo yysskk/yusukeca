@@ -19,8 +19,8 @@ Yusuke Morishita is a mobile software engineer based in North Vancouver, BC, Can
 
 ## Open Source
 - SwipeMenuViewController: Swipable tab and menu UI for iOS — https://github.com/yysskk/SwipeMenuViewController
-- swift-nostr-client: Nostr protocol client in Swift — https://github.com/nicklama/swift-nostr-client
-- swift-mockable: Mock generation for Swift testing — https://github.com/nicklama/swift-mockable
+- swift-nostr: Nostr protocol client in Swift — https://github.com/yysskk/swift-nostr
+- swift-mockable: Mock generation for Swift testing — https://github.com/yysskk/swift-mockable
 
 ## Education
 - Osaka Prefecture University — Bachelor of Mechanical Engineering
