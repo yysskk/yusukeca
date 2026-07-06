@@ -23,6 +23,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
+                  timeZone: 'UTC',
                 })}
               </time>
             </a>
