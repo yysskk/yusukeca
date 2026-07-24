@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/yysskk/yusukeca#readme",
   "dependencies": {
-    "astro": "^7.0.6"
+    "astro": "^7.1.3"
   }
 }
